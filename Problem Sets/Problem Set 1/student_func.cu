@@ -2,11 +2,11 @@
 // Color to Greyscale Conversion
 
 //A common way to represent color images is known as RGBA - the color
-//is specified by how much Red, Green, and Blue is in it.
-//The 'A' stands for Alpha and is used for transparency; it will be
+//is specified by how much Red, Grean and Blue is in it.
+//The 'A' stands for Alpha and is used for transparency, it will be
 //ignored in this homework.
 
-//Each channel Red, Blue, Green, and Alpha is represented by one byte.
+//Each channel Red, Blue, Green and Alpha is represented by one byte.
 //Since we are using one byte for each color there are 256 different
 //possible values for each color.  This means we use 4 bytes per pixel.
 
@@ -30,6 +30,7 @@
 
 //You should fill in the kernel as well as set the block and grid sizes
 //so that the entire image is processed.
+
 
 #include "utils.h"
 #include <stdio.h>
@@ -77,4 +78,3 @@ void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, uchar4 * const d_r
   
   cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 }
-

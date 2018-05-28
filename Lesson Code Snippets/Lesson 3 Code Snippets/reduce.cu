@@ -8,7 +8,7 @@ __global__ void global_reduce_kernel(float * d_out, float * d_in)
     int tid  = threadIdx.x;
 
     // do reduction in global mem
-    for (unsigned int s = blockDim.x / 2; s > 0; s >>= 1)
+    for (unsigned int s = blockDim.x / 2; s > 0; s >>= 1)// each iteration add right half to left half
     {
         if (tid < s)
         {
